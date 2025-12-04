@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История Казахстана: от XV до XXI века</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-dark: #004499;
+            --secondary-color: #f0f8ff;
+            --accent-color: #ffcc00;
+            --accent-dark: #e6b800;
+            --text-color: #333;
+            --light-color: #fff;
+            --dark-color: #1a1a2e;
+            --correct-color: #4CAF50;
+            --incorrect-color: #F44336;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(0, 70, 153, 0.9), rgba(0, 70, 153, 0.8)), url('https://images.unsplash.com/photo-1540959733332-8cbd5d2d96c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--light-color);
+            padding: 4rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23004699' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .header-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Intro Section */
+        .intro {
+            padding: 5rem 0;
+            text-align: center;
+            background: var(--light-color);
+            position: relative;
+        }
+
+        .intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+        }
+
+        .intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Timeline Section */
+        .timeline-container {
+            position: relative;
+            padding: 4rem 0;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .century-card {
+            display: flex;
+            background: var(--light-color);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .century-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .century-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .century-content {
+            flex: 1;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .century-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .century-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+        }
+
+        .century-title {
+            font-size: 2rem;
+            color: var(--primary-dark);
+        }
+
+        .century-subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-dark);
+            margin-bottom: 1rem;
+        }
+
+        .century-image {
+            flex: 1;
+            min-height: 300px;
+            overflow: hidden;
+        }
+
+        .century-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .century-card:hover .century-image img {
+            transform: scale(1.05);
+        }
+
+        .quiz-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 1rem 2rem;
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 1.5rem;
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+        }
+
+        .quiz-btn:hover {
+            background: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 204, 0, 0.4);
+        }
+
+        /* Quiz Section */
+        .quiz-container {
+            display: none;
+            background: var(--light-color);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            margin: 4rem auto;
+            max-width: 900px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quiz-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .quiz-title {
+            font-size: 2rem;
+            color: var(--primary-dark);
+        }
+
+        .quiz-progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .question {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--secondary-color);
+            border-radius: 10px;
+        }
+
+        .question h3 {
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+        }
+
+        .options {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .option {
+            padding: 1.2rem;
+            background: var(--light-color);
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .option:hover {
+            border-color: var(--primary-color);
+        }
+
+        .option.selected {
+            background: var(--primary-color);
+            color: var(--light-color);
+            border-color: var(--primary-color);
+        }
+
+        .option.correct {
+            background: var(--correct-color);
+            color: var(--light-color);
+            border-color: var(--correct-color);
+        }
+
+        .option.incorrect {
+            background: var(--incorrect-color);
+            color: var(--light-color);
+            border-color: var(--incorrect-color);
+        }
+
+        .option.correct-answer {
+            background: var(--correct-color);
+            color: var(--light-color);
+            border-color: var(--correct-color);
+            position: relative;
+        }
+
+        .option.correct-answer::after {
+            content: '✓ Правильный ответ';
+            position: absolute;
+            right: 10px;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .option-number {
+            width: 30px;
+            height: 30px;
+            background: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .option.selected .option-number,
+        .option.correct .option-number, 
+        .option.incorrect .option-number,
+        .option.correct-answer .option-number {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .nav-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .nav-btn:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .result-container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .result-score {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin: 1rem 0;
+            font-weight: 700;
+        }
+
+        .result-message {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .restart-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 1rem 2rem;
+            background: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .restart-btn:hover {
+            background: var(--accent-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: var(--light-color);
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #cccccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--light-color);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .century-card {
+                flex-direction: column;
+            }
+            
+            .century-image {
+                order: -1;
+                min-height: 250px;
+            }
+            
+            h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .stat {
+                width: 100%;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+            
+            .quiz-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .quiz-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-btn {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .century-title {
+                font-size: 1.7rem;
+            }
+            
+            .century-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>История Казахстана</h1>
+                <p class="subtitle">От XV до XXI века: путь становления и развития великой нации</p>
+                <div class="header-stats">
+                    <div class="stat">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Веков истории</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Событий</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">70</span>
+                        <span class="stat-label">Вопросов викторины</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <h2>Путешествие сквозь века</h2>
+            <p>Казахстан имеет богатую и многогранную историю, охватывающую множество эпох и событий. На этом сайте вы сможете познакомиться с ключевыми вехами развития казахского народа с XV по XXI век, а также проверить свои знания в интерактивных викторинах.</p>
+        </div>
+    </section>
+
+    <section class="timeline-container">
+        <div class="container">
+            <div class="timeline" id="centuries-container">
+                <!-- Карточки веков будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="quiz-container" id="quiz-container">
+            <div class="quiz-header">
+                <h2 class="quiz-title" id="quiz-title">Викторина</h2>
+                <div class="quiz-progress" id="quiz-progress">Вопрос 1 из 10</div>
+            </div>
+            <div id="quiz-content">
+                <!-- Содержимое викторины будет обновляться через JavaScript -->
+            </div>
+            <div class="navigation">
+                <button class="nav-btn" id="prev-btn" disabled><i class="fas fa-arrow-left"></i> Назад</button>
+                <button class="nav-btn" id="next-btn">Далее <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>История Казахстана</h3>
+                    <p>Изучайте богатую историю казахского народа с XV по XXI век через интерактивные материалы и викторины.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">О проекте</a></li>
+                        <li><a href="#">Источники</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@kazakhhistory.kz</li>
+                        <li><i class="fas fa-phone"></i> +7 (771) 864 88 27</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Нур-Султан, Казахстан</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 История Казахстана. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Данные о веках
+        const centuriesData = [
+            {
+                id: 15,
+                title: "XV век",
+                subtitle: "Становление Казахского ханства",
+                content: "В XV веке произошло формирование Казахского ханства. В 1465 году султаны Керей и Жанибек основали первое казахское государство. Этот период характеризуется объединением казахских племен, развитием кочевой культуры и установлением дипломатических отношений с соседними государствами.",
+                icon: "fa-flag",
+                image: "kaz/image/im1.jpeg"
+            },
+            {
+                id: 16,
+                title: "XVI век",
+                subtitle: "Расцвет и укрепление ханства",
+                content: "XVI век стал периодом расцвета Казахского ханства при хане Касыме. Была проведена административная реформа, укрепилась государственная власть, развивалась торговля по Великому Шелковому пути. Казахское ханство установило дипломатические отношения с Россией и государствами Центральной Азии.",
+                icon: "fa-crown",
+                image: "kaz/image/im2.jpeg"
+            },
+            {
+                id: 17,
+                title: "XVII век",
+                subtitle: "Период междоусобиц и внешних угроз",
+                content: "XVII век ознаменовался внутренними распрями и борьбой с джунгарскими нашествиями. Несмотря на трудности, казахское общество сохранило свою целостность. Развивалась устная литература, особенно творчество жырау (сказителей), сохранявших историческую память народа.",
+                icon: "fa-shield-alt",
+                image: "kaz/image/im3.jpeg"
+            },
+            {
+                id: 18,
+                title: "XVIII век",
+                subtitle: "Борьба с джунгарами и принятие российского протектората",
+                content: "В XVIII веке казахи вели ожесточенную борьбу с джунгарскими захватчиками. В 1726 году состоялась Анракайская битва, а в 1730-х годах начался процесс принятия российского подданства, завершившийся в 1731 году при хане Абулхаире. Это открыло новый этап в истории казахских земель.",
+                icon: "fa-handshake",
+                image: "kaz/image/im4.png"
+            },
+            {
+                id: 19,
+                title: "XIX век",
+                subtitle: "Колонизация и национально-освободительные движения",
+                content: "XIX век характеризовался усилением российской колонизации казахских земель, что вызвало ряд национально-освободительных восстаний (Кенесары Касымов, Исатай Тайманов). В то же время происходило развитие образования, появлялась казахская интеллигенция, формировались основы современной казахской культуры.",
+                icon: "fa-book",
+                image: "kaz/image/im5.jpeg"
+            },
+            {
+                id: 20,
+                title: "XX век",
+                subtitle: "Советский период и обретение независимости",
+                content: "XX век принес кардинальные изменения: установление советской власти, коллективизация, Великая Отечественная война, освоение целинных земель. 16 декабря 1991 года Казахстан провозгласил независимость. Начался сложный процесс становления суверенного государства, экономических и политических реформ.",
+                icon: "fa-star",
+                image: "kaz/image/im6.jpeg"
+            },
+            {
+                id: 21,
+                title: "XXI век",
+                subtitle: "Современный Казахстан на мировой арене",
+                content: "В XXI веке Казахстан укрепил свою государственность, провел успешные экономические реформы, стал активным участником международных процессов. Страна председательствовала в ОБСЕ, провела ЭКСПО-2017, развивает программы модернизации и цифровизации. Астана (ныне Нур-Султан) стала современной столицей, символизирующей динамичное развитие страны.",
+                icon: "fa-globe",
+                image: "kaz/image/im7.jpeg"
+            }
+        ];
+
+        // Данные викторин для каждого века
+       const quizzesData = {
+    15: [
+        {
+            question: "Какие политические факторы способствовали образованию Казахского ханства в 1465 году?",
+            options: ["Распад Золотой Орды и ослабление Моголистана", "Объединение тюркских племен под влиянием ислама", "Военные победы над Тимуридами", "Экономический кризис в соседних государствах"],
+            correct: 0
+        },
+        {
+            question: "Какую стратегическую цель преследовали Керей и Жанибек при создании Казахского ханства?",
+            options: ["Создание торгового союза с Китаем", "Объединение разрозненных племен для защиты от внешних угроз", "Завоевание территорий Сибирского ханства", "Установление контроля над Шелковым путем"],
+            correct: 1
+        },
+        {
+            question: "Почему Сыгнак был выбран первой столицей Казахского ханства?",
+            options: ["Наличие мощных оборонительных сооружений", "Близость к местам кочевий основных племен", "Расположение на пересечении торговых путей", "Наличие крупных водных ресурсов"],
+            correct: 2
+        },
+        {
+            question: "Какие экономические последствия имело образование Казахского ханства для региона?",
+            options: ["Сокращение торговли с соседними государствами", "Интеграция кочевого и оседлого хозяйств", "Развитие городской культуры в степи", "Усиление контроля над караванными путями"],
+            correct: 0
+        },
+        {
+            question: "Как повлияло образование Казахского ханства на этногенез казахского народа?",
+            options: ["Вызвало миграцию в соседние регионы", "Способствовало сохранению родоплеменной структуры", "Ускорило консолидацию тюркских племен", "Привело к смешению с монгольскими племенами"],
+            correct: 2
+        },
+        {
+            question: "Какую дипломатическую стратегию использовали первые казахские ханы для укрепления государства?",
+            options: ["Полная изоляция от внешнего мира", "Подчинение Османской империи", "Динамичные союзы с соседними государствами", "Жесткая конфронтация с Моголистаном"],
+            correct: 1
+        },
+        {
+            question: "Какие факторы способствовали быстрому расширению территории Казахского ханства в конце XV века?",
+            options: ["Поддержка духовенства", "Технологическое превосходство в вооружении", "Экономические трудности соседей", "Военная организация и мобильность конницы"],
+            correct: 3
+        },
+        {
+            question: "Как изменилась социальная структура казахского общества после образования ханства?",
+            options: ["Появилась жесткая феодальная иерархия", "Произошла демократизация управления", "Усилилась роль городского населения", "Укрепилась власть ханов при сохранении родоплеменных институтов"],
+            correct: 2
+        },
+        {
+            question: "Почему ислам не сразу стал доминирующей религией в Казахском ханстве?",
+            options: ["Противостояние с исламскими государствами", "Отсутствие образованных мулл среди кочевников", "Сохранение тенгрианских традиций", "Кочевой образ жизни препятствовал строительству мечетей"],
+            correct: 1
+        },
+        {
+            question: "Какую роль сыграли караванные пути в становлении экономики Казахского ханства?",
+            options: ["Привели к зависимости от иностранных товаров", "Стимулировали развитие городов", "Способствовали культурному обмену", "Обеспечили приток товаров и налогов"],
+            correct: 3
+        }
+    ],
+    16: [
+        {
+            question: "Какие административные реформы хана Касыма способствовали укреплению центральной власти?",
+            options: ["Создание постоянной армии и налоговой системы", "Введение письменного законодательства", "Учреждение постоянной столицы", "Реорганизация родоплеменной структуры"],
+            correct: 0
+        },
+        {
+            question: "Как 'Касым ханнын каска жолы' повлиял на правовую систему Казахского ханства?",
+            options: ["Ограничил власть султанов в пользу хана", "Отменил кровную месть", "Ввел шариат вместо традиционных законов", "Унифицировал обычное право разных племен"],
+            correct: 2
+        },
+        {
+            question: "Почему период правления хана Касыма считается 'золотым веком' Казахского ханства?",
+            options: ["Максимальное расширение территории", "Установление стабильных границ", "Создание сильной централизованной армии", "Экономический и культурный расцвет"],
+            correct: 3
+        },
+        {
+            question: "Как развитие дипломатических отношений с Московским государством повлияло на Казахское ханство?",
+            options: ["Укрепило позиции в противостоянии с Джунгарией", "Способствовало военно-техническому обмену", "Привело к культурной ассимиляции", "Открыло новые торговые возможности"],
+            correct: 0
+        },
+        {
+            question: "Какие факторы способствовали расцвету городской культуры в XVI веке?",
+            options: ["Стабилизация политической ситуации", "Влияние соседних оседлых цивилизаций", "Строительство укрепленных крепостей", "Развитие трансконтинентальной торговли"],
+            correct: 1
+        },
+        {
+            question: "Как изменение климата в XVI веке повлияло на экономику Казахского ханства?",
+            options: ["Вынудило к частичному переходу к земледелию", "Способствовало развитию отгонного скотоводства", "Привело к сокращению пастбищ", "Усилило миграционные процессы"],
+            correct: 0
+        },
+        {
+            question: "Почему Казахское ханство сохранило кочевой уклад, несмотря на развитие городов?",
+            options: ["Нехватка водных ресурсов для земледелия", "Традиционная социальная организация", "Военные преимущества кочевого образа жизни", "Экологические условия степной зоны"],
+            correct: 3
+        },
+        {
+            question: "Какую роль играли курултаи в политической системе XVI века?",
+            options: ["Решали вопросы войны и мира", "Распределяли пастбищные территории", "Контролировали торговые пути", "Легитимировали власть хана"],
+            correct: 2
+        },
+        {
+            question: "Какие культурные заимствования произошли в Казахском ханстве в результате контактов с соседями?",
+            options: ["Литературные традиции и письменность", "Музыкальные инструменты и жанры", "Религиозные обряды и практики", "Архитектурные стили и строительные технологии"],
+            correct: 1
+        },
+        {
+            question: "Почему к концу XVI века начался период политической раздробленности?",
+            options: ["Внешние военные угрозы", "Экономические трудности", "Борьба за власть среди султанов", "Ослабление центральной власти хана"],
+            correct: 0
+        }
+    ],
+    17: [
+        {
+            question: "Какие стратегические ошибки казахских правителей усугубили джунгарскую угрозу в XVII веке?",
+            options: ["Недооценка военной мощи Джунгарии", "Преждевременное наступление на врага", "Отсутствие единой оборонительной системы", "Междоусобная борьба за власть"],
+            correct: 1
+        },
+        {
+            question: "Как 'Жеты Жаргы' хана Тауке модернизировал правовую систему?",
+            options: ["Ввел фиксированные наказания вместо кровной мести", "Установил приоритет ханских законов над племенными", "Создал судебную систему по российскому образцу", "Систематизировал обычное право с учетом новых реалий"],
+            correct: 0
+        },
+        {
+            question: "Почему Орбулакская битва 1643 года считается образцом военного искусства?",
+            options: ["Координация действий с войсками Есим-хана", "Применение нового типа огнестрельного оружия", "Морально-психологическое воздействие на противника", "Эффективное использование местности и тактики засады"],
+            correct: 3
+        },
+        {
+            question: "Как формирование жузовой системы повлияло на политическое развитие?",
+            options: ["Усилило военный потенциал государства", "Упростило решение локальных проблем", "Создало региональные центры силы", "Децентрализовало управление, ослабив центральную власть"],
+            correct: 2
+        },
+        {
+            question: "Какие экономические последствия имели джунгарские набеги?",
+            options: ["Сокращение поголовья скота", "Потеря контроля над водными ресурсами", "Депопуляция приграничных территорий", "Разрушение торговых путей и городов"],
+            correct: 0
+        },
+        {
+            question: "Как творчество жырау XVII века отражало политическую ситуацию?",
+            options: ["Критиковало междоусобицы знати", "Пропагандировало принятие российского подданства", "Сохраняло историческую память о героях", "Призывало к единству перед внешней угрозой"],
+            correct: 3
+        },
+        {
+            question: "Почему Казахское ханство не смогло создать постоянную регулярную армию?",
+            options: ["Ограниченность экономических ресурсов", "Отсутствие профессиональных военных командиров", "Традиционная система ополчения", "Кочевой образ жизни и родоплеменная организация"],
+            correct: 0
+        },
+        {
+            question: "Как изменилась внешняя политика Казахского ханства под давлением Джунгарии?",
+            options: ["Возникли проекты антиджунгарских коалиций", "Были предприняты попытки договориться с Китаем", "Активизировались поиски союзников", "Усилились дипломатические контакты с Россией"],
+            correct: 2
+        },
+        {
+            question: "Какие демографические изменения произошли в XVII веке?",
+            options: ["Смешение с побежденными джунгарскими племенами", "Приток населения из разоренных регионов", "Миграция населения в безопасные районы", "Уменьшение численности из-за постоянных войн"],
+            correct: 1
+        },
+        {
+            question: "Почему 'Жеты Жаргы' сохранял актуальность до XIX века?",
+            options: ["Учет специфики кочевого общества", "Отсутствие альтернативных правовых систем", "Баланс между традицией и инновациями", "Гибкость и адаптивность к меняющимся условиям"],
+            correct: 3
+        }
+    ],
+    18: [
+        {
+            question: "Какие внутриполитические факторы заставили Абулхаир-хана искать российское покровительство?",
+            options: ["Угроза со стороны джунгар и волжских калмыков", "Давление со стороны Китайской империи", "Экономическая истощенность после длительных войн", "Междоусобная борьба в Младшем жузе"],
+            correct: 1
+        },
+        {
+            question: "Почему Анракайская битва 1729 года не привела к окончательной победе над джунгарами?",
+            options: ["Неспособность организовать преследование противника", "Тактические ошибки командования", "Вмешательство третьих сил в конфликт", "Отсутствие единства среди казахских правителей"],
+            correct: 2
+        },
+        {
+            question: "Как российское подданство изменило правовой статус казахских земель?",
+            options: ["Сохранение внутренней автономии при внешнем контроле", "Полная ликвидация традиционных институтов власти", "Изменение принципов землепользования", "Постепенное включение в имперскую административную систему"],
+            correct: 0
+        },
+        {
+            question: "Почему Абылай-хану удалось временно объединить все три жуза?",
+            options: ["Реальная джунгарская угроза", "Финансовая помощь Российской империи", "Поддержка широких слоев населения", "Личный авторитет и дипломатический талант"],
+            correct: 3
+        },
+        {
+            question: "Как падение Джунгарского ханства повлияло на геополитическую ситуацию в регионе?",
+            options: ["Усилило российско-китайское соперничество", "Открыло возможности для расширения казахских кочевий", "Привело к разделу джунгарских территорий", "Создало вакуум власти в Центральной Азии"],
+            correct: 2
+        },
+        {
+            question: "Какие противоречия возникли между казахами и российскими властями после принятия подданства?",
+            options: ["Вмешательство во внутренние дела жузов", "Различия в правовых системах", "Ограничения в торговле и передвижении", "Конфликты из.за земельных вопросов"],
+            correct: 3
+        },
+        {
+            question: "Почему политика Абылай-хана считается образцом многовекторной дипломатии?",
+            options: ["Использование противоречий между великими державами", "Умение менять союзников в зависимости от ситуации", "Сохранение максимальной самостоятельности", "Одновременные отношения с Россией, Китаем и Центральной Азией"],
+            correct: 0
+        },
+        {
+            question: "Как изменилась социальная структура под влиянием российского присутствия?",
+            options: ["Ослабление родоплеменных связей", "Формирование пророссийской элиты", "Рост имущественного неравенства", "Появление новых социальных групп (переводчики, чиновники)"],
+            correct: 1
+        },
+        {
+            question: "Какие культурные изменения произошли в XVIII веке?",
+            options: ["Развитие письменной историографии", "Появление первых светских школ", "Распространение русскоязычного образования", "Проникновение европейских культурных влияний"],
+            correct: 3
+        },
+        {
+            question: "Почему институт ханской власти постепенно приходил в упадок?",
+            options: ["Внутренние противоречия среди степной аристократии", "Потеря поддержки населения", "Изменение экономических условий", "Политика Российской империи по ограничению ханских полномочий"],
+            correct: 0
+        }
+    ],
+    19: [
+        {
+            question: "Какие идеологические основы были у восстания Кенесары Касымова?",
+            options: ["Сохранение территориальной целостности казахских земель", "Создание независимого исламского государства", "Протест против колониальной политики царизма", "Восстановление традиционной государственности"],
+            correct: 0
+        },
+        {
+            question: "Почему восстание 1837-1847 годов потерпело поражение, несмотря на широкую поддержку?",
+            options: ["Отсутствие единства среди казахской знати", "Предательство отдельных руководителей восстания", "Нехватка ресурсов для длительной войны", "Военно-техническое превосходство царской армии"],
+            correct: 1
+        },
+        {
+            question: "Как реформы 1867-1868 годов изменили систему управления степью?",
+            options: ["Ликвидация традиционных институтов власти", "Учреждение военно-казачьего управления", "Территориальное переустройство по российскому образцу", "Введение прямого имперского управления"],
+            correct: 2
+        },
+        {
+            question: "Почему деятельность казахских просветителей имела противоречивый характер?",
+            options: ["Критика как колониальной политики, так и степных обычаев", "Зависимость от поддержки царских властей", "Поиск синтеза восточной и западной культур", "Стремление модернизировать общество при сохранении традиций"],
+            correct: 3
+        },
+        {
+            question: "Как переселенческая политика повлияла на экологию казахских степей?",
+            options: ["Нарушение традиционных маршрутов кочевания", "Изменение гидрологического режима рек", "Усиление процессов опустынивания", "Сокращение пастбищных угодий"],
+            correct: 0
+        },
+        {
+            question: "Почему творчество Абая Кунанбаева считается переломным моментом в казахской культуре?",
+            options: ["Философское осмысление проблем модернизации", "Критика социальных порогов современного общества", "Создание литературного казахского языка", "Синтез казахских, восточных и европейских традиций"],
+            correct: 1
+        },
+        {
+            question: "Какие экономические изменения произошли в результате строительства железных дорог?",
+            options: ["Развитие товарного животноводства", "Появление промышленных предприятий", "Рост городов и торговли", "Интеграция региона в общероссийский рынок"],
+            correct: 2
+        },
+        {
+            question: "Почему российские власти поддерживали развитие образования среди казахов?",
+            options: ["Экономические потребности колониальной администрации", "Создание социального лифта для местного населения", "Распространение русской культуры и языка", "Подготовка лояльной местной администрации"],
+            correct: 1
+        },
+        {
+            question: "Как изменилось положение женщины в казахском обществе к концу XIX века?",
+            options: ["Ослабление некоторых традиционных ограничений", "Участие женщин в общественной жизни", "Влияние русских культурных норм", "Появление первых образованных женщин"],
+            correct: 0
+        },
+        {
+            question: "Почему национально-освободительное движение не переросло в массовое в XIX веке?",
+            options: ["Отсутствие единой идеологии сопротивления", "Недостаток военных ресурсов", "Эффективность колониальной администрации", "Разобщенность социальных групп и регионов"],
+            correct: 3
+        }
+    ],
+    20: [
+        {
+            question: "Какие факторы способствовали быстрому установлению советской власти в Казахстане?",
+            options: ["Поддержка части населения социальными лозунгами", "Распространение коммунистической идеологии", "Военное превосходство красных частей", "Слабость национальных политических структур"],
+            correct: 0
+        },
+        {
+            question: "Почему коллективизация вызвала более тяжелые последствия в Казахстане, чем в других регионах СССР?",
+            options: ["Климатические особенности и неурожаи", "Отсутствие инфраструктуры для коллективных хозяйств", "Ошибки и перегибы в проведении политики", "Несовместимость кочевого скотоводства с колхозной системой"],
+            correct: 1
+        },
+        {
+            question: "Как индустриализация изменила социальную структуру казахского общества?",
+            options: ["Массовая урбанизация и изменение образа жизни", "Сокращение сельского населения", "Интернационализация населения", "Формирование рабочего класса и технической интеллигенции"],
+            correct: 2
+        },
+        {
+            question: "Почему освоение целины имело противоречивые последствия?",
+            options: ["Демографические изменения и межэтнические отношения", "Нарушение традиционного землепользования", "Экономическая эффективность в краткосрочной перспективе", "Экологические проблемы и эрозия почв"],
+            correct: 3
+        },
+        {
+            question: "Как повлияла политика коренизации на развитие казахской культуры?",
+            options: ["Формирование национальной интеллигенции", "Возрождение национальных традиций", "Стандартизация казахского литературного языка", "Развитие национального образования и печати"],
+            correct: 0
+        },
+        {
+            question: "Почему Декабрьские события 1986 года стали переломным моментом в национальном самосознании?",
+            options: ["Пробуждение политической активности молодежи", "Формирование оппозиционного движения", "Начало открытого обсуждения национальных проблем", "Массовый протест против диктата центра"],
+            correct: 1
+        },
+        {
+            question: "Как ядерные испытания на Семипалатинском полигоне повлияли на экологию и здоровье населения?",
+            options: ["Рост онкологических заболеваний", "Изменение климатических условий региона", "Долгосрочные генетические последствия", "Радиоактивное загрязнение обширных территорий"],
+            correct: 2
+        },
+        {
+            question: "Почему провозглашение независимости в 1991 году прошло мирно?",
+            options: ["Подготовленность казахстанской элиты к суверенитету", "Международное признание права на независимость", "Отсутствие сильных сепаратистских движений", "Распад СССР как общесоюзного государства"],
+            correct: 3
+        },
+        {
+            question: "Как изменилась внешняя политика Казахстана после получения независимости?",
+            options: ["Активное участие в международных организациях", "Установление дипломатических отношений со всеми странами мира", "Ядерное разоружение и мирные инициативы", "Многовекторность и балансирование между крупными державами"],
+            correct: 0
+        },
+        {
+            question: "Почему рыночные реформы 1990-х вызвали социальные трудности?",
+            options: ["Гиперинфляция и падение уровня жизни", "Отсутствие экономического опыта у населения", "Коррупция и неравномерное распределение собственности", "Неподготовленность инфраструктуры к рыночным отношениям"],
+            correct: 1
+        }
+    ],
+    21: [
+        {
+            question: "Почему перенос столицы в Астану имел стратегическое значение?",
+            options: ["Символический разрыв с советским прошлым", "Создание нового административного центра", "Стимул для развития северных регионов", "Геополитическое положение в центре страны"],
+            correct: 0
+        },
+        {
+            question: "Как председательство в ОБСЕ повлияло на международный статус Казахстана?",
+            options: ["Укрепление дипломатического потенциала", "Усиление роли в решении международных конфликтов", "Повышение внимания к центральноазиатскому региону", "Признание как ответственного международного актора"],
+            correct: 1
+        },
+        {
+            question: "Почему программа 'Казахстан-2050' делает акцент на инновациях и человеческом капитале?",
+            options: ["Демографические вызовы и глобальная конкуренция", "Требования устойчивого развития", "Цифровая трансформация мировой экономики", "Необходимость перехода от сырьевой к knowledge-based экономике"],
+            correct: 2
+        },
+        {
+            question: "Как EXPO-2017 способствовало развитию 'зеленой экономики' в Казахстане?",
+            options: ["Популяризация энергоэффективных технологий", "Создание исследовательских центров по зеленым технологиям", "Формирование национальной экологической политики", "Привлечение инвестиций в возобновляемую энергетику"],
+            correct: 3
+        },
+        {
+            question: "Почему политика мультикультурализма стала важным элементом государственной стратегии?",
+            options: ["Предотвращение межэтнических конфликтов", "Требования международного сообщества", "Формирование общеказахстанской идентичности", "Историческая многоэтничность населения"],
+            correct: 0
+        },
+        {
+            question: "Как цифровизация повлияла на государственное управление и экономику?",
+            options: ["Развитие IT-сектора и стартап-культуры", "Создание электронного правительства", "Модернизация традиционных отраслей экономики", "Повышение прозрачности и эффективности госуслуг"],
+            correct: 1
+        },
+        {
+            question: "Почему Казахстан активно развивает транзитный потенциал?",
+            options: ["Диверсификация экономики от сырьевой зависимости", "Создание рабочих мест в транспортном секторе", "Интеграция в глобальные транспортные коридоры", "Географическое положение между крупными рынками"],
+            correct: 2
+        },
+        {
+            question: "Как меняется культурная политика в условиях глобализации?",
+            options: ["Продвижение казахской культуры на международной арене", "Адаптация к мировым культурным трендам", "Развитие креативных индустрий", "Баланс между сохранением традиций и модернизацией"],
+            correct: 3
+        },
+        {
+            question: "Почему вопросы экологии и водных ресурсов становятся приоритетными?",
+            options: ["Трансграничный характер водных проблем в Центральной Азии", "Дефицит водных ресурсов в регионе", "Необходимость устойчивого развития", "Последствия изменения климата для аграрного сектора"],
+            correct: 0
+        },
+        {
+            question: "Как политические реформы 2020-х годов повлияли на систему управления?",
+            options: ["Усиление роли парламента и местного самоуправления", "Децентрализация принятия решений", "Ликвидация сверхпрезидентской системы", "Перераспределение полномочий между ветвями власти"],
+            correct: 1
+        }
+    ]
+};
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCenturies();
+            setupIntersectionObserver();
+            
+            // Добавляем обработчики для кнопок навигации
+            document.getElementById('prev-btn').addEventListener('click', goToPreviousQuestion);
+            document.getElementById('next-btn').addEventListener('click', goToNextQuestion);
+        });
+
+        // Функция для отображения карточек веков
+        function renderCenturies() {
+            const container = document.getElementById('centuries-container');
+            
+            centuriesData.forEach(century => {
+                const card = document.createElement('div');
+                card.className = 'century-card';
+                card.innerHTML = `
+                    <div class="century-content">
+                        <div class="century-header">
+                            <div class="century-icon">
+                                <i class="fas ${century.icon}"></i>
+                            </div>
+                            <div>
+                                <h2 class="century-title">${century.title}</h2>
+                                <p class="century-subtitle">${century.subtitle}</p>
+                            </div>
+                        </div>
+                        <p>${century.content}</p>
+                        <button class="quiz-btn" data-century="${century.id}">
+                            <i class="fas fa-question-circle"></i> Пройти викторину
+                        </button>
+                    </div>
+                    <div class="century-image">
+                        <img src="${century.image}" alt="${century.title}">
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+            // Добавляем обработчики событий для кнопок викторины
+            document.querySelectorAll('.quiz-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const centuryId = this.getAttribute('data-century');
+                    startQuiz(centuryId);
+                });
+            });
+        }
+
+        // Настройка Intersection Observer для анимации появления карточек
+        function setupIntersectionObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.century-card').forEach(card => {
+                observer.observe(card);
+            });
+        }
+
+        // Переменные для управления викториной
+        let currentQuiz = null;
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let currentCenturyId = null;
+        let quizCompleted = false;
+        let answerSelected = false;
+
+        // Функция для начала викторины
+        function startQuiz(centuryId) {
+            currentCenturyId = centuryId;
+            currentQuiz = quizzesData[centuryId];
+            currentQuestionIndex = 0;
+            userAnswers = new Array(currentQuiz.length).fill(null);
+            quizCompleted = false;
+            answerSelected = false;
+            
+            // Показываем контейнер викторины
+            document.getElementById('quiz-container').style.display = 'block';
+            
+            // Прокручиваем к викторине
+            document.getElementById('quiz-container').scrollIntoView({ behavior: 'smooth' });
+            
+            // Обновляем заголовок викторины
+            const century = centuriesData.find(c => c.id == centuryId);
+            document.getElementById('quiz-title').textContent = `Викторина: ${century.title}`;
+            
+            // Отображаем первый вопрос
+            displayQuestion();
+        }
+
+        // Функция для отображения текущего вопроса
+        function displayQuestion() {
+            const question = currentQuiz[currentQuestionIndex];
+            const quizContent = document.getElementById('quiz-content');
+            
+            // Обновляем прогресс
+            document.getElementById('quiz-progress').textContent = `Вопрос ${currentQuestionIndex + 1} из ${currentQuiz.length}`;
+            
+            // Создаем HTML для вопроса
+            let optionsHTML = '';
+            question.options.forEach((option, index) => {
+                const isSelected = userAnswers[currentQuestionIndex] === index;
+                const isCorrect = index === question.correct;
+                let optionClass = 'option';
+                
+                if (isSelected) {
+                    optionClass += ' selected';
+                }
+                
+                // Если ответ уже выбран, показываем правильные/неправильные ответы
+                if (userAnswers[currentQuestionIndex] !== null) {
+                    if (isCorrect) {
+                        optionClass += ' correct';
+                    } else if (isSelected && !isCorrect) {
+                        optionClass += ' incorrect';
+                    }
+                }
+                
+                optionsHTML += `
+                    <div class="${optionClass}" data-index="${index}">
+                        <div class="option-number">${String.fromCharCode(65 + index)}</div>
+                        <div>${option}</div>
+                    </div>
+                `;
+            });
+            
+            quizContent.innerHTML = `
+                <div class="question">
+                    <h3>${question.question}</h3>
+                </div>
+                <div class="options">
+                    ${optionsHTML}
+                </div>
+            `;
+            
+            // Добавляем обработчики событий для вариантов ответов только если ответ еще не выбран
+            if (userAnswers[currentQuestionIndex] === null) {
+                document.querySelectorAll('.option').forEach(option => {
+                    option.addEventListener('click', function() {
+                        if (answerSelected) return; // Предотвращаем повторный выбор
+                        
+                        answerSelected = true;
+                        const selectedIndex = parseInt(this.getAttribute('data-index'));
+                        userAnswers[currentQuestionIndex] = selectedIndex;
+                        
+                        // Проверяем ответ и показываем результат
+                        checkAnswer(selectedIndex, question.correct);
+                        
+                        // Автоматический переход к следующему вопросу через 1 секунду
+                        setTimeout(() => {
+                            if (currentQuestionIndex < currentQuiz.length - 1) {
+                                currentQuestionIndex++;
+                                answerSelected = false;
+                                displayQuestion();
+                            } else {
+                                // Завершаем викторину и показываем результаты
+                                quizCompleted = true;
+                                showResults();
+                            }
+                        }, 1000);
+                    });
+                });
+            }
+            
+            // Обновляем состояние кнопок навигации
+            updateNavigationButtons();
+        }
+
+        // Функция для проверки ответа и отображения результата
+        function checkAnswer(selectedIndex, correctIndex) {
+            const options = document.querySelectorAll('.option');
+            
+            options.forEach((option, index) => {
+                const isSelected = index === selectedIndex;
+                const isCorrect = index === correctIndex;
+                
+                // Сначала снимаем все классы
+                option.classList.remove('selected', 'correct', 'incorrect');
+                
+                // Добавляем соответствующие классы
+                if (isSelected) {
+                    if (isCorrect) {
+                        option.classList.add('correct');
+                    } else {
+                        option.classList.add('incorrect');
+                    }
+                }
+                
+                // Всегда показываем правильный ответ
+                if (isCorrect) {
+                    option.classList.add('correct');
+                }
+            });
+        }
+
+        // Функция для обновления состояния кнопок навигации
+        function updateNavigationButtons() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            
+            // Кнопка "Назад"
+            prevBtn.disabled = currentQuestionIndex === 0;
+            
+            // Кнопка "Далее"
+            if (currentQuestionIndex === currentQuiz.length - 1) {
+                nextBtn.textContent = 'Завершить';
+                nextBtn.innerHTML = 'Завершить <i class="fas fa-check"></i>';
+            } else {
+                nextBtn.textContent = 'Далее';
+                nextBtn.innerHTML = 'Далее <i class="fas fa-arrow-right"></i>';
+            }
+            
+            // Если ответ не выбран, блокируем кнопку "Далее"
+            if (userAnswers[currentQuestionIndex] === null) {
+                nextBtn.disabled = true;
+            } else {
+                nextBtn.disabled = false;
+            }
+        }
+
+        // Функция для перехода к предыдущему вопросу
+        function goToPreviousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                answerSelected = false;
+                displayQuestion();
+            }
+        }
+
+        // Функция для перехода к следующему вопросу
+        function goToNextQuestion() {
+            if (currentQuestionIndex < currentQuiz.length - 1) {
+                currentQuestionIndex++;
+                answerSelected = false;
+                displayQuestion();
+            } else {
+                // Завершаем викторину и показываем результаты
+                quizCompleted = true;
+                showResults();
+            }
+        }
+
+        // Функция для отображения результатов
+        function showResults() {
+            // Подсчет правильных ответов
+            let correctCount = 0;
+            currentQuiz.forEach((question, index) => {
+                if (userAnswers[index] === question.correct) {
+                    correctCount++;
+                }
+            });
+            
+            const percentage = Math.round((correctCount / currentQuiz.length) * 100);
+            
+            const quizContent = document.getElementById('quiz-content');
+            quizContent.innerHTML = `
+                <div class="result-container">
+                    <h2>Результаты викторины</h2>
+                    <div class="result-score">${correctCount} из ${currentQuiz.length}</div>
+                    <div class="result-score">${percentage}%</div>
+                    <p class="result-message">${getResultMessage(percentage)}</p>
+                    <button class="restart-btn" id="restart-btn">
+                        <i class="fas fa-redo"></i> Пройти еще раз
+                    </button>
+                </div>
+            `;
+            
+            // Скрываем кнопки навигации
+            document.querySelector('.navigation').style.display = 'none';
+            
+            // Обработчик для кнопки "Пройти еще раз"
+            document.getElementById('restart-btn').addEventListener('click', function() {
+                startQuiz(currentCenturyId);
+                document.querySelector('.navigation').style.display = 'flex';
+            });
+        }
+
+        // Функция для получения сообщения о результате
+        function getResultMessage(percentage) {
+            if (percentage >= 90) {
+                return "Отлично! Вы прекрасно знаете историю Казахстана!";
+            } else if (percentage >= 70) {
+                return "Хорошо! Вы хорошо разбираетесь в истории Казахстана.";
+            } else if (percentage >= 50) {
+                return "Неплохо! Но есть над чем поработать.";
+            } else {
+                return "Попробуйте еще раз! Изучение истории - это интересный процесс!";
+            }
+        }
+    </script>
+</body>
+</html>
